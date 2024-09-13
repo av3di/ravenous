@@ -1,0 +1,19 @@
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.business-info {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.business h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.business-info p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
