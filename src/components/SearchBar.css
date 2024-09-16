@@ -1,0 +1,24 @@
+.first-row {
+  padding-top: 50px;
+}
+.second-row {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+button {
+  border: 0;
+  background: #C97C5D;
+  color: #EEE2DF;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+input, select {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-right: 12px;
+  border: 1px solid #C97C5D;
+}
