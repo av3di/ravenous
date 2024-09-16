@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import storeList from './storeList';
 import BusinessList from './components/BusinessList';
 import SearchBar from './components/SearchBar';
 
@@ -10,7 +11,7 @@ function App() {
         <h1>ravenous</h1>
       </header>
         <SearchBar />
-        <BusinessList />
+        <BusinessList businesses={storeList} />
         <a
           className="App-link"
           href="https://reactjs.org"
