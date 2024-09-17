@@ -22,3 +22,7 @@ input, select {
   margin-right: 12px;
   border: 1px solid #C97C5D;
 }
+
+#sort_by {
+  margin-left: 10px;
+}
