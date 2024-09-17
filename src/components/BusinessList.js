@@ -3,8 +3,9 @@ import './BusinessList.css';
 import Business from './Business';
 
 function BusinessList(props) {
-  const businessList = props.businesses.map(business => {
-    return <Business name={business.name}
+  const businessList = props.businesses.map((business, index) => {
+    return <Business key={index}
+            name={business.name}
             imageSrc={business.imageSrc}
             address={business.address}
             city={business.city}
@@ -16,7 +17,7 @@ function BusinessList(props) {
             />;
   });
   return (
-    <div class="business-list">
+    <div className="business-list">
       {businessList}
     </div>
   );
