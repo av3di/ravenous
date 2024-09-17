@@ -2,13 +2,15 @@ import React, {useState} from 'react';
 import './SearchBar.css';
 
 function SearchBar() {
-  const [sort, setSort] = useState('best_match');
   const [searchTerm, setSearchTerm] = useState('');
   const [location, setLocation] = useState('');
+  const [sort, setSort] = useState('best_match');
 
   const handleSearchTermChange = ({target}) => setSearchTerm(target.value);
-  
+
   const handleLocationChange = ({target}) => setLocation(target.value);
+
+  const handleSortChange = ({target}) => setSort(target.value);
 
   return (
     <div>
@@ -18,7 +20,7 @@ function SearchBar() {
       </div>
       <div class="second-row">
         <label for="sort_by">Sort by:</label>
-        <select id="sort_by">
+        <select id="sort_by" onChange={handleSortChange}>
           <option value="best_match">Best Match</option>
           <option value="rating">Highest Rated</option>
           <option value="review_count">Most Reviewed</option>
