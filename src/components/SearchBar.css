@@ -16,6 +16,11 @@ button {
   font-weight: 600;
   font-style: normal;
 }
+button:hover {
+  cursor: pointer;
+  background: #EEE2DF;
+  color: #C97C5D;
+}
 input, select {
   padding: 10px 20px;
   font-size: 18px;

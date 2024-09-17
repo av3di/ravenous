@@ -12,20 +12,25 @@ function SearchBar() {
 
   const handleSortChange = ({target}) => setSort(target.value);
 
+  const handleClick = (e) => {
+    if(!searchTerm || !location) return;
+    console.log(`Searching Yelp for ${searchTerm} in ${location}, sorted by ${sort}`);
+  };
+
   return (
     <div>
-      <div class="first-row">
+      <div className="first-row">
         <input value={searchTerm} onChange={handleSearchTermChange} placeholder="Search Businesses" />
         <input value={location} onChange={handleLocationChange} placeholder="Where?" />
       </div>
-      <div class="second-row">
-        <label for="sort_by">Sort by:</label>
+      <div className="second-row">
+        <label htmlFor="sort_by">Sort by:</label>
         <select id="sort_by" onChange={handleSortChange}>
           <option value="best_match">Best Match</option>
           <option value="rating">Highest Rated</option>
           <option value="review_count">Most Reviewed</option>
         </select>
-        <button>Search</button>
+        <button onClick={handleClick}>Search</button>
       </div>
     </div>
   );
