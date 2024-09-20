@@ -8,8 +8,8 @@ import search from './utils/yelp';
 function App() {
   const [businesses, setBusinesses] = useState([]);
 
-  const searchYelp = async () => {
-    const businesses = await search();
+  const searchYelp = async (term, location, sort) => {
+    const businesses = await search(term, location, sort);
     setBusinesses(businesses);
   }
   return (
@@ -17,14 +17,8 @@ function App() {
       <header className="App-header">
         <h1>ravenous</h1>
       </header>
-        <SearchBar />
+        <SearchBar searchYelp={searchYelp} />
         <BusinessList businesses={businesses} />
-        <a
-          className="App-link"
-          onClick={searchYelp}
-        >
-          Learn React
-        </a>
     </div>
   );
 }

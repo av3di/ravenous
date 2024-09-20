@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './SearchBar.css';
 
-function SearchBar() {
+function SearchBar(props) {
   const [searchTerm, setSearchTerm] = useState('');
   const [location, setLocation] = useState('');
   const [sort, setSort] = useState('best_match');
@@ -14,14 +14,14 @@ function SearchBar() {
 
   const handleClick = (e) => {
     if(!searchTerm || !location) return;
-    console.log(`Searching Yelp for ${searchTerm} in ${location}, sorted by ${sort}`);
+    props.searchYelp(searchTerm, location, sort);
   };
 
   return (
     <div>
       <div className="first-row">
         <input value={searchTerm} onChange={handleSearchTermChange} placeholder="Search Businesses" />
-        <input value={location} onChange={handleLocationChange} placeholder="Where?" />
+        <input value={location} onChange={handleLocationChange} placeholder="Zip or City, State" />
       </div>
       <div className="second-row">
         <label htmlFor="sort_by">Sort by:</label>
