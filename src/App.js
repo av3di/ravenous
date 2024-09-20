@@ -3,8 +3,10 @@ import './App.css';
 import storeList from './storeList';
 import BusinessList from './components/BusinessList';
 import SearchBar from './components/SearchBar';
+import search from './utils/yelp';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,9 +16,7 @@ function App() {
         <BusinessList businesses={storeList} />
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={search}
         >
           Learn React
         </a>
