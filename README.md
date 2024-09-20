@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is a project that was assigned by codecademy while completing the Build Web Apps with React Course to increase comfort level with React. The project uses Yelp API to allow a user to search for businesses if they provide a search term, location (such as zip code or city, state). They can also pick how they want the results sorted.
+
+I removed my API key here for privacy reasons, but you can request your own api key at [Yelp] (https://www.yelp.com/login?return_url=%2Fdevelopers%2Fv3%2Fmanage_app). Download the project, plug in your API key and run: npm start.
 
 ## Available Scripts
 
