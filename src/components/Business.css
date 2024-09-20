@@ -1,13 +1,29 @@
-.text-left {
+.left-side {
   text-align: left;
+  margin-right: 20px;
 }
-.text-right {
+.right-side {
   text-align: right;
+}
+
+.image-container {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid #EED7C5 2px;
+  background-size: cover;
+  background-position: center;
 }
 .business-info {
   display: flex;
   flex-flow: row;
   align-items: center;
+  justify-content: center;
+}
+.business {
+  border: solid 3px #EED7C5;
+  padding: 30px 0px;
 }
 .business h4 {
   margin-top: 10px;
