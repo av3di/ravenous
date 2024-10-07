@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import BusinessList from './components/BusinessList';
 import SearchBar from './components/SearchBar';
+import Pagination from './components/Pagination';
 import search from './utils/yelp';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       </header>
         <SearchBar searchYelp={searchYelp} />
         <BusinessList businesses={businesses} />
+        <Pagination />
     </div>
   );
 }
