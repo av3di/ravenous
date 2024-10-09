@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 I removed my API key here for privacy reasons, but you can request your own api key at [Yelp] (https://www.yelp.com/login?return_url=%2Fdevelopers%2Fv3%2Fmanage_app). Download the project, plug in your API key and run: npm start.
 
+If running locally, can use https://cors-anywhere.herokuapp.com/corsdemo to prevent CORS error.
+
 ## Available Scripts
 
 In the project directory, you can run:
