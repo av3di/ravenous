@@ -2,26 +2,22 @@ import React, {useState} from 'react';
 import './SearchBar.css';
 
 function SearchBar(props) {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [location, setLocation] = useState('');
-  const [sort, setSort] = useState('best_match');
+  const handleSearchTermChange = ({target}) => props.setSearchTerm(target.value);
 
-  const handleSearchTermChange = ({target}) => setSearchTerm(target.value);
+  const handleLocationChange = ({target}) => props.setLocation(target.value);
 
-  const handleLocationChange = ({target}) => setLocation(target.value);
-
-  const handleSortChange = ({target}) => setSort(target.value);
+  const handleSortChange = ({target}) => props.setSort(target.value);
 
   const handleClick = (e) => {
-    if(!searchTerm || !location) return;
-    props.searchYelp(searchTerm, location, sort);
+    if(!props.searchTerm || !props.location) return;
+    props.searchYelp();
   };
 
   return (
     <div>
       <div className="first-row">
-        <input value={searchTerm} onChange={handleSearchTermChange} placeholder="Search Businesses" />
-        <input value={location} onChange={handleLocationChange} placeholder="Zip or City, State" />
+        <input value={props.searchTerm} onChange={handleSearchTermChange} placeholder="Search Businesses" />
+        <input value={props.location} onChange={handleLocationChange} placeholder="Zip or City, State" />
       </div>
       <div className="second-row">
         <label htmlFor="sort_by">Sort by:</label>

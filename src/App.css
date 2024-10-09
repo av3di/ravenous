@@ -36,3 +36,13 @@ h1 {
 .App-link {
   color: #61dafb;
 }
+
+button:disabled {
+  background-color: #D3D3D3;
+  color: #fff;
+}
+button:hover:disabled {
+  background-color: #D3D3D3;
+  color: #fff;
+  cursor: not-allowed;
+}

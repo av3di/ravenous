@@ -1,11 +1,11 @@
 import React from 'react';
 import './Pagination.css';
 
-function Pagination() {
+function Pagination(props) {
   return (
     <div className="pagination">
-      <button>Previous</button>
-      <button>Next</button>
+      <button onClick={props.getPreviousPage} disabled={props.disablePrevious}>Previous</button>
+      <button onClick={props.getNextPage} disabled={props.disableNext}>Next</button>
     </div>
   );
 }
